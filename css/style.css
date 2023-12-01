@@ -24,7 +24,7 @@ body {
    color: #fff;
    height: 5.875rem;
    position:fixed ;
-   width: 100px;
+   width: 100%;
    left: 0;
    top: 0;
    z-index: 2;
@@ -67,7 +67,7 @@ z-index: 0;
 .header-logo{
    display: flex;
    align-items: center; 
-   padding: 0px 3.125rem; 
+   padding: 1.5625rem 3.125rem; 
    border-right: 1px solid  rgba(235,235,240, 0.2);
    height: 100%;
 }
@@ -75,8 +75,7 @@ z-index: 0;
    display: flex;
    flex-basis: 100%;
    list-style: none;
-   padding-left: 3.125rem;
-   padding: 0%;
+   padding: 0 3.125rem;
    margin: 0;
 }
 .header-nav-item:not(:last-child) {
@@ -85,6 +84,7 @@ z-index: 0;
 .header-nav-link{
     text-decoration: none;
     font-size: 1rem;
+    margin-right: 3.125rem;
     color: inherit;
     }
 .header-phone{
@@ -156,7 +156,7 @@ z-index: 0;
     position: relative;
 }
 .header-features-item{
-    padding: 1.875rem 50px;
+    padding: 1.875rem 3.125rem;
     width: 18rem;
     border: 1px solid rgba(235, 235, 240, 0.20);
 }
@@ -235,7 +235,7 @@ margin-bottom: 1.25rem;
     width: 2.5rem;
     margin-right: 1.25rem;
 }
-@media (min-width: 106.25rem) {
+@media (max-width: 1700px) {
   html {
     font-size: .875rem;
   }
@@ -243,4 +243,29 @@ margin-bottom: 1.25rem;
     background-position: center;
 
   }
+}
+@media (max-width: 1460px) {
+  html {
+    font-size: 13px;
+  }
+  .header-logo{
+    padding: 2rem;
+  }
+  .logo-svg{
+    min-width: 6rem;
+  }
+  .header-nav {
+    padding-left: 2rem;
+  }
+  .header-nav-item:not(:last-child) { 
+   margin-right: 1rem;
+  }
+  .header-phone {
+    margin-right: 2rem;
+  }
+}
+@media (max-width: 1200px) {
+    .header-phone{
+        display: none;
+    }
 }
